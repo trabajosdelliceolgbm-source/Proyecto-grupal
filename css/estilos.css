@@ -54,13 +54,20 @@ body {
 /* HERO */
 .hero {
     height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
-                url("img/fondo.jpg") no-repeat center/cover;
+
+    /* IMAGEN DE FONDO */
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url("../img/caption-2.jpg");
+
+    background-size: cover;      /* Ajusta la imagen */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
+
 
 .hero-text h2 {
     font-size: 50px;
