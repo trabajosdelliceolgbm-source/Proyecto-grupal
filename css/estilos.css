@@ -56,10 +56,31 @@ body {
     height: 90vh;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
                 url("img/fondo.jpg") no-repeat center/cover;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.hero table {
+    
+    margin-bottom: 40px;
+    margin: 0px auto;
+    border: 1px solid white;
+}
+.hero table th {
+    border: 1px solid white;
+
+}
+
+.hero table td {
+    padding: 20px;
+    border: 1px solid white;
+
+}
+
+.hero-text {
+    margin-bottom: 40px;
 }
 
 .hero-text h2 {
