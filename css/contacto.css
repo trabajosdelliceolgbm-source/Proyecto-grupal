@@ -54,11 +54,6 @@ body {
 /* HERO */
 .hero {
     height: 90vh;
-<<<<<<< HEAD
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
-                url("img/fondo.jpg") no-repeat center/cover;
-    /* display: flex; */
-=======
 
     /* IMAGEN DE FONDO */
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url("../img/caption-2.jpg");
@@ -68,35 +63,11 @@ body {
     background-repeat: no-repeat;
 
     display: flex;
->>>>>>> 2a2ce56cbb61b64d0f2d1f7b99a39daded26bebc
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-<<<<<<< HEAD
-.hero table {
-    
-    margin-bottom: 40px;
-    margin: 0px auto;
-    border: 1px solid white;
-}
-.hero table th {
-    border: 1px solid white;
-
-}
-
-.hero table td {
-    padding: 20px;
-    border: 1px solid white;
-
-}
-
-.hero-text {
-    margin-bottom: 40px;
-}
-=======
->>>>>>> 2a2ce56cbb61b64d0f2d1f7b99a39daded26bebc
 
 .hero-text h2 {
     font-size: 50px;
