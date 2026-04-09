@@ -56,7 +56,7 @@ body {
     height: 90vh;
 
     /* IMAGEN DE FONDO */
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url("../img/caption-2.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url("../img/fondo-servicios.jpg");
 
     background-size: cover;      /* Ajusta la imagen */
     background-position: center; /* Centra la imagen */
