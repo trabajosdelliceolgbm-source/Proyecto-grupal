@@ -54,49 +54,34 @@ body {
 /* HERO */
 .hero {
     height: 90vh;
-<<<<<<< HEAD
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
-                url("img/fondo.jpg") no-repeat center/cover;
-    /* display: flex; */
-=======
 
-    /* IMAGEN DE FONDO */
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url("../img/caption-2.jpg");
-
-    background-size: cover;      /* Ajusta la imagen */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat;
+    /* IMAGEN DE FONDO CORREGIDA */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
+                url("../img/caption-2.jpg") center/cover no-repeat;
 
     display: flex;
->>>>>>> 2a2ce56cbb61b64d0f2d1f7b99a39daded26bebc
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-<<<<<<< HEAD
+/* TABLA HERO */
 .hero table {
-    
-    margin-bottom: 40px;
-    margin: 0px auto;
-    border: 1px solid white;
-}
-.hero table th {
-    border: 1px solid white;
-
+    margin: 20px auto;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-collapse: collapse;
 }
 
+.hero table th,
 .hero table td {
-    padding: 20px;
-    border: 1px solid white;
-
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 15px;
 }
 
+/* TEXTO HERO */
 .hero-text {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
-=======
->>>>>>> 2a2ce56cbb61b64d0f2d1f7b99a39daded26bebc
 
 .hero-text h2 {
     font-size: 50px;
@@ -185,6 +170,138 @@ footer {
     padding: 15px;
     font-size: 14px;
     color: #aaa;
+}
+
+/* ===================== */
+/* CONTACTO ELEGANTE */
+/* ===================== */
+
+.contacto {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.contacto .card {
+    background: linear-gradient(145deg, #020617, #0f172a);
+    width: 380px;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(250,204,21,0.1);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+}
+
+/* INFO */
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ITEMS */
+.contacto .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 8px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.contacto .item:hover {
+    background: rgba(250,204,21,0.05);
+}
+
+/* ICONOS */
+.icono {
+    color: #facc15;
+    width: 25px;
+    text-align: center;
+}
+
+/* LINKS */
+.link {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #facc15;
+}
+
+/* ESTADO */
+.verde {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+/* LINEA */
+.linea {
+    border-top: 1px solid rgba(250,204,21,0.1);
+    margin: 15px 0;
+}
+
+/* MAPA */
+.mapa iframe {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+}
+
+/* BOTÓN MAPA */
+.btn-mapa {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    border-radius: 8px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+.btn-mapa:hover {
+    background: #38bdf8;
+    color: #000;
+}
+
+/* RESEÑAS */
+.reviews {
+    margin-top: 20px;
+}
+
+.reviews h3 {
+    color: #facc15;
+}
+
+.rating {
+    color: #facc15;
+}
+
+.review {
+    background: rgba(255,255,255,0.03);
+    border-left: 3px solid #facc15;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+/* BOTÓN TRIP */
+.btn-trip {
+    border: 1px solid #22c55e;
+    color: #22c55e;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-trip:hover {
+    background: #22c55e;
+    color: #000;
 }
 
 /* RESPONSIVE */
