@@ -17,28 +17,30 @@
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="contactos.html">Contacto</a></li>
+                <!-- CORRECCIÓN: Se cambió "contactos.html" por "#contacto" -->
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- HERO / INICIO -->
-    <section class="hero">
+    <!-- HERO / CONTACTO -->
+    <!-- CORRECCIÓN: Se agregó el id="contacto" para que el botón te traiga aquí -->
+    <section class="hero" id="contacto">
         <div class="hero-text">
             <h2>Bienvenido a Das Haus</h2>
-            <p>Aqui les mostramos nuentra lista de Contactos para Reservar </p>
+            <p>Aquí les mostramos nuestra lista de Contactos para Reservar</p>
         </div>
 
         <table>
             <tr>
-                <th>Pagina</th>
-                <th>Ubicacion</th>
-                <th>Telefonos</th>
-                <th>Gmail</th>
-                <th>Recomendacion</th>
+                <th>Página</th>
+                <th>Ubicación</th>
+                <th>Teléfonos</th>
+                <th>Correo</th>
+                <th>Recomendación</th>
             </tr>
             <tr>
-                <td>Restaurante aleman</td>
+                <td>Restaurante Alemán</td>
                 <td>O'Higgins 394, Valdivia, Chile</td>
                 <td>(62) 221 3878</td>
                 <td>dashaus1959@gmail.com</td>
@@ -46,16 +48,17 @@
             </tr>
         </table>
 
-          <iframe 
-  src="https://www.google.com/maps?q=Das+Haus+Valdivia+Chile&output=embed"
-  width="100%" 
-  height="400">
-</iframe>
+        <!-- CORRECCIÓN: Se añadieron atributos recomendados por Google Maps -->
+        <iframe 
+            src="https://www.google.com/maps?q=Das+Haus+Valdivia+Chile&output=embed"
+            width="100%" 
+            height="400"
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
 
-       
     </section>
-
-
 
     <!-- SOBRE NOSOTROS -->
     <section class="about">
