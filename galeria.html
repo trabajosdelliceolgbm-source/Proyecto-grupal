@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Das Haus | Restaurante Alemán en Valdivia</title>
+    <title>Galeria</title>
     <link rel="stylesheet" href="css/servicios.css">
 </head>
 
@@ -12,7 +12,7 @@
     <!-- NAVBAR -->
     <header>
         <nav class="navbar">
-            <h1 class="logo">Das Haus</h1>
+            <h1 class="logo">Galeria</h1>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
@@ -21,88 +21,126 @@
             </ul>
         </nav>
     </header>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
-    <!-- HERO / INICIO -->
-     <section class="banner">
+    body{
+      font-family: Arial, sans-serif;
+      background:#111;
+      padding:40px;
+    }
 
-     </section>
-    <section class="hero">
-        <div class="hero-text">
-            <h2>Bienvenido a la Galeria</h2>
-            <br>
-            <h3>Aqui hay fotos de Nuestro After School</h3>
-            <br>
-            <h3>Para deleiten su visión con nuestro proyecto</h3>
-        </div>
-    </section>
+    h1{
+      color:white;
+      text-align:center;
+      margin-bottom:30px;
+    }
 
-    <!-- DESTACADOS -->
-    <section class="destacados">
-        <h2>Platos Destacados</h2>
+    .galeria{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:15px;
+    }
 
-        <div class="cards">
-            <div class="card">
-                <h3>🍖 Crudos</h3>
-                <p>Carne jugosa acompañada de papas y chucrut.</p>
-                <img id="Crudos" src="img/costillar aleman con papas.jpg" alt="" width="238" height="250">
-            </div>
+    .galeria img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+      border-radius:10px;
+      cursor:pointer;
+      transition:0.3s;
+    }
 
-            <div class="card">
-                <h3>🌭 Choripan con papas</h3>
-                <p>Variedad de sabores con recetas tradicionales.</p>
-                <img id="Salchichas" src="img/salchichas.jpg" alt="" width="238" height="250">
-            </div>
+    .galeria img:hover{
+      transform:scale(1.03);
+      opacity:0.9;
+    }
 
-            <div class="card">
-                <h3>🍺 Cerveza Artesanal</h3>
-                <p>Selección cuidadosa de cervezas locales e importadas para usted.</p>
-                <img id="Cerveza" src="img/cerveza.jpg" alt="" width="238" height="250">
-            </div>
+    /* Lightbox */
 
-            <div class="card">
-                <h3>🐟 Tartaros</h3>
-                <p>Combina la suavidad del atún con la cremosidad del aguacate.</p>
-                <img id="Tartaro" src="img/Tartaros.jpg" alt="" width="238" height="250">
-            </div>
+    .lightbox{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.9);
+      display:none;
+      justify-content:center;
+      align-items:center;
+      z-index:999;
+    }
 
-            <div class="card">
-                <h3>🥖 Sandwich de carne</h3>
-                <p>este sándwich se come con tiempo. Mechada hecha como corresponde, para sentarse y disfrutar.</p>
-                <img id="Sandwitch" src="img/sandwitch.jpg" alt="" width="238" height="250">
-            </div>
+    .lightbox img{
+      max-width:90%;
+      max-height:80%;
+      border-radius:10px;
+    }
 
-            <div class="card">
-                <h3> 🥞 Kuchen</h3>
-                <p>Para cuando necesitas algo dulce, pero bien hecho. Kuchen de nuez suave, dulce y equilibrado</p>
-                <img id="Kuchen" src="img/kuchen.jpg" alt="" width="238" height="250">
-            </div>
-        </div>
-    </section>
+    .cerrar{
+      position:absolute;
+      top:20px;
+      right:30px;
+      color:white;
+      font-size:40px;
+      cursor:pointer;
+    }
+  </style>
+</head>
 
-    <!-- SOBRE NOSOTROS -->
-    <section class="about">
-        <h2>Sobre la preparación</h2>
-        <p>
-            Cada platillo se elabora al momento, utilizando técnicas cuidadosamente seleccionadas que resaltan el sabor y la textura de ingredientes frescos. Nuestro equipo cuida cada detalle del proceso, desde la preparación hasta el emplatado, para ofrecer una experiencia auténtica, equilibrada y llena de calidad en cada bocado.
-        </p>
+<body>
 
-        <p>
-            Nuestro compromiso es brindar calidad, buen ambiente y una atención cercana,
-            ideal para disfrutar en familia o con amigos.
-        </p>
-    </section>
+  <h1>Galeria after School</h1>
+  <br>
+  <h3>Aqui hay fotos Sobre el After School</h3>
 
-    <!-- LLAMADO A LA ACCIÓN -->
-    <section class="cta">
-        <h2>¿Quieres visitarnos?</h2>
-        <p>Revisa nuestros servicios o contáctanos para reservas.</p>
-        <a href="contacto.html" class="btn">Reservar Ahora</a>
-    </section>
+  <div class="galeria">
+    <img src="img/descarga (7).jpg" alt="">
+    <img src="img/descarga (8).jpg" alt="">
+    <img src="img/jair.jpeg" alt="">
+    <img src="img/maxi (2).jpeg" alt="">
+    <img src="https://picsum.photos/id/1055/600/400" alt="">
+    <img src="https://picsum.photos/id/1065/600/400" alt="">
+    <img src="https://picsum.photos/id/1015/600/400" alt="">
+    <img src="https://picsum.photos/id/1025/600/400" alt="">
+    <img src="https://picsum.photos/id/1035/600/400" alt="">
+    <img src="https://picsum.photos/id/1045/600/400" alt="">
+    <img src="https://picsum.photos/id/1055/600/400" alt="">
+    <img src="https://picsum.photos/id/1065/600/400" alt="">
+  </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Das Haus - Valdivia, Chile</p>
-    </footer>
+  <div class="lightbox" id="lightbox">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" src="">
+  </div>
+
+  <script>
+    const imagenes = document.querySelectorAll('.galeria img');
+    const lightbox = document.getElementById('lightbox');
+    const imagenGrande = document.getElementById('imagenGrande');
+    const cerrar = document.querySelector('.cerrar');
+
+    imagenes.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        imagenGrande.src = img.src;
+      });
+    });
+
+    cerrar.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if(e.target !== imagenGrande){
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
 
 </body>
 </html>
