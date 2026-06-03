@@ -1,72 +1,156 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Das Haus | Restaurante Alemán en Valdivia</title>
+    <title>Galeria</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-    <!-- HERO / CONTACTO -->
-    <!-- CORRECCIÓN: Se agregó el id="contacto" para que el botón te traiga aquí -->
-    <section class="hero" id="contacto">
-        <div class="hero-text">
-            <h2>Bienvenido a Das Haus</h2>
-            <p>Aquí les mostramos nuestra lista de Contactos para Reservar</p>
-        </div>
 
-        <table>
-            <tr>
-                <th>Página</th>
-                <th>Ubicación</th>
-                <th>Teléfonos</th>
-                <th>Correo</th>
-                <th>Recomendación</th>
-            </tr>
-            <tr>
-                <td>Restaurante Alemán</td>
-                <td>O'Higgins 394, Valdivia, Chile</td>
-                <td>(62) 221 3878</td>
-                <td>dashaus1959@gmail.com</td>
-                <td>Recomendado por el 96%</td>
-            </tr>
-        </table>
 
-        <!-- CORRECCIÓN: Se añadieron atributos recomendados por Google Maps -->
-        <iframe 
-            src="https://www.google.com/maps?q=Das+Haus+Valdivia+Chile&output=embed"
-            width="100%" 
-            height="400"
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy">
-        </iframe>
 
-    </section>
+<style>
 
-    <!-- SOBRE NOSOTROS -->
-    <section class="about">
-        <h2>liceo Bicentenario Gabriela Mistral</h2>
-        <p>
-            Das Haus es un restaurante inspirado en la tradición alemana del sur de Chile.
-            Ubicado en Valdivia, ofrecemos una experiencia gastronómica única que mezcla
-            recetas tradicionales con ingredientes locales.
-        </p>
+body{
+  margin:0;
+  background:#111;
+  font-family:Arial, sans-serif;
+}
 
-        <p>
-            Nuestro compromiso es brindar calidad, buen ambiente y una atención cercana,
-            ideal para disfrutar en familia o con amigos.
-        </p>
-    </section>
+h1{
+  color:white;
+  text-align:center;
+  padding:30px;
+}
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Das Haus - Valdivia, Chile</p>
-    </footer>
+/* GALERIA */
+.galeria{
+  width:90%;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  padding-bottom:40px;
+}
+
+/* IMAGENES */
+.galeria img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:12px;
+  cursor:pointer;
+  transition:0.4s;
+}
+
+.galeria img:hover{
+  transform:scale(1.05);
+  box-shadow:0 10px 25px rgba(255,255,255,0.3);
+}
+
+/* VENTANA EMERGENTE */
+.modal{
+  display:none;
+  position:fixed;
+  z-index:999;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.9);
+
+  justify-content:center;
+  align-items:center;
+}
+
+/* IMAGEN GRANDE */
+.modal img{
+  max-width:90%;
+  max-height:80%;
+  border-radius:15px;
+  animation:zoom 0.3s;
+}
+
+/* BOTON CERRAR */
+.cerrar{
+  position:absolute;
+  top:20px;
+  right:40px;
+  color:white;
+  font-size:40px;
+  cursor:pointer;
+}
+
+/* ANIMACION */
+@keyframes zoom{
+  from{
+    transform:scale(0.5);
+    opacity:0;
+  }
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Galería Interactiva</h1>
+
+<div class="galeria">
+
+  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop" onclick="abrir(this.src)">
+
+  <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=1200&auto=format&fit=crop" onclick="abrir(this.src)">
+
+  <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?q=80&w=1200&auto=format&fit=crop" onclick="abrir(this.src)">
+
+  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" onclick="abrir(this.src)">
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+
+  <span class="cerrar" onclick="cerrar()">&times;</span>
+
+  <img id="imagen-grande">
+
+</div>
+
+<script>
+
+const modal = document.getElementById("modal");
+const imagenGrande = document.getElementById("imagen-grande");
+
+/* ABRIR IMAGEN */
+function abrir(src){
+  modal.style.display = "flex";
+  imagenGrande.src = src;
+}
+
+/* CERRAR IMAGEN */
+function cerrar(){
+  modal.style.display = "none";
+}
+
+/* CERRAR AL HACER CLICK FUERA */
+modal.addEventListener("click", function(e){
+
+  if(e.target !== imagenGrande){
+    cerrar();
+  }
+
+});
+
+</script>
 
 </body>
-
 </html>
+
 <style>
 
 body{
