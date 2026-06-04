@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liceo Bicentenario Gabriela Mistral | Ubicado en mafil- Los Ríos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+    <!-- HERO / INICIO -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Bienvenido al Liceo Bicentenario Gabriela Mistral</h2>
+            <h3>"Construyendo aprendizajes, valores y oportunidades para cada estudiante.".</h3>
+            <p>En nuestro liceo promovemos una educación de calidad, el desarrollo integral de nuestros estudiantes y los valores que fortalecen una comunidad educativa comprometida con el futuro.</p>
+            <a href="servicios.html" class="btn">Ver Servicios</a>
+        </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section class="about">
+        <h2>Sobre Nosotros</h2>
+        <p>
+            En el Liceo Bicentenario Gabriela Mistral, formamos estudiantes con excelencia académica, valores y compromiso con su comunidad. Promovemos una educación integral que impulsa el desarrollo personal, el respeto, la responsabilidad y la preparación para enfrentar los desafíos del futuro, manteniendo viva nuestra tradición educativa en el corazón de Valdivia.
+        </p>
+
+        <p>
+            Nuestro compromiso es brindar calidad, buen ambiente y una atención cercana,
+            ideal para disfrutar en familia o con amigos.
+        </p>
+    </section>
+
+    <!-- DESTACADOS -->
+    <section class="destacados">
+        <h2>¿Qué nos destaca?</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>👨‍🍳 Elaboración con dedicación</h3>
+                <p>Cada platillo es preparado al momento por manos expertas que cuidan cada detalle del proceso, garantizando frescura, sabor y una presentación impecable en cada servicio.</p>
+            </div>
+
+            <div class="card">
+                <h3>🥘 Cocina hecha con pasión</h3>
+                <p>Nuestra preparación combina experiencia, creatividad y amor por la gastronomía, dando como resultado platillos equilibrados y llenos de carácter.</p>
+            </div>
+
+            <div class="card">
+                <h3>⏱️ Preparación al instante</h3>
+                <p>Trabajamos bajo el concepto de cocina al momento, asegurando que cada cliente reciba su platillo recién hecho, con todo su sabor y temperatura ideal.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LLAMADO A LA ACCIÓN -->
+    <section class="cta">
+        <h2>¿Quieres visitarnos?</h2>
+        <p>Revisa nuestros servicios o contáctanos para reservas.</p>
+        <a href="contacto.html" class="btn">Reservar Ahora</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Das Haus - Valdivia, Chile</p>
+    </footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Menú Funcional</title>
+
+<style>
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#111;
+  height:100vh;
+}
+
+/* BOTÓN */
+.menu-btn{
+  position:fixed;
+  top:20px;
+  right:20px;
+  width:45px;
+  cursor:pointer;
+  z-index:1001;
+}
+
+.menu-btn span{
+  display:block;
+  height:5px;
+  margin:6px 0;
+  background:white;
+  border-radius:5px;
+  transition:0.4s;
+}
+
+/* ANIMACIÓN X */
+.menu-btn.active span:nth-child(1){
+  transform:translateY(11px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2){
+  opacity:0;
+}
+
+.menu-btn.active span:nth-child(3){
+  transform:translateY(-11px) rotate(-45deg);
+}
+
+/* MENU */
+.menu{
+  position:fixed;
+  top:0;
+  right:-260px;
+  width:260px;
+  height:100%;
+  background:#222;
+  padding-top:80px;
+  transition:0.4s;
+  z-index:1000;
+}
+
+.menu.active{
+  right:0;
+}
+
+/* LINKS */
+.menu a{
+  display:block;
+  color:white;
+  text-decoration:none;
+  padding:18px 25px;
+  font-size:18px;
+  transition:0.3s;
+}
+
+.menu a:hover{
+  background:#444;
+  padding-left:35px;
+}
+
+/* OVERLAY */
+.overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  display:none;
+  z-index:999;
+}
+
+.overlay.active{
+  display:block;
+}
+
+h1{
+  color:white;
+  text-align:center;
+  padding-top:100px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- BOTÓN -->
+<div class="menu-btn" id="menu-btn">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<!-- MENÚ -->
+<div class="menu" id="menu">
+  <a href="index.html">Inicio</a>
+  <a href="Galeria.html">Galería</a>
+  <a href="servicios.html">Servicios</a>
+  <a href="contacto.html">Contacto</a>
+</div>
+
+<!-- OVERLAY -->
+<div class="overlay" id="overlay"></div>
+
+<h1>Mi Página Web</h1>
+
+<script>
+
+const menuBtn = document.getElementById("menu-btn");
+const menu = document.getElementById("menu");
+const overlay = document.getElementById("overlay");
+const links = document.querySelectorAll(".menu a");
+
+function toggleMenu(){
+  menuBtn.classList.toggle("active");
+  menu.classList.toggle("active");
+  overlay.classList.toggle("active");
+}
+
+/* BOTÓN */
+menuBtn.addEventListener("click", toggleMenu);
+
+/* OVERLAY */
+overlay.addEventListener("click", toggleMenu);
+
+/* LINKS */
+links.forEach(link => {
+  link.addEventListener("click", toggleMenu);
+});
+
+</script>
+
+</body>
+</html>
